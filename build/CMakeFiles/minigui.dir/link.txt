@@ -1,0 +1,1 @@
+/usr/bin/clang++ -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/minigui.dir/src/main.cpp.o CMakeFiles/minigui.dir/src/canvas/canvas.cpp.o CMakeFiles/minigui.dir/src/window/window.cpp.o -o minigui 

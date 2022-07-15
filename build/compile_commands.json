@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/Users/robbetiteca/projects/miniGUI/build",
+  "command": "/usr/bin/clang++   -g -std=gnu++14 -o CMakeFiles/minigui.dir/src/main.cpp.o -c /Users/robbetiteca/projects/miniGUI/src/main.cpp",
+  "file": "/Users/robbetiteca/projects/miniGUI/src/main.cpp"
+},
+{
+  "directory": "/Users/robbetiteca/projects/miniGUI/build",
+  "command": "/usr/bin/clang++   -g -std=gnu++14 -o CMakeFiles/minigui.dir/src/canvas/canvas.cpp.o -c /Users/robbetiteca/projects/miniGUI/src/canvas/canvas.cpp",
+  "file": "/Users/robbetiteca/projects/miniGUI/src/canvas/canvas.cpp"
+},
+{
+  "directory": "/Users/robbetiteca/projects/miniGUI/build",
+  "command": "/usr/bin/clang++   -g -std=gnu++14 -o CMakeFiles/minigui.dir/src/window/window.cpp.o -c /Users/robbetiteca/projects/miniGUI/src/window/window.cpp",
+  "file": "/Users/robbetiteca/projects/miniGUI/src/window/window.cpp"
+}
+]
