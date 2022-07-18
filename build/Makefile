@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/Cellar/cmake/3.23.2/bin/cmake
+CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.23.2/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/Cellar/cmake/3.23.2/bin/cmake -E rm -f
+RM = /opt/homebrew/Cellar/cmake/3.23.2/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/robbetiteca/projects/miniGUI
+CMAKE_SOURCE_DIR = /Users/robbetiteca/projects/sdl-gui
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/robbetiteca/projects/miniGUI/build
+CMAKE_BINARY_DIR = /Users/robbetiteca/projects/sdl-gui/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /Users/robbetiteca/projects/miniGUI/build
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/local/Cellar/cmake/3.23.2/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/homebrew/Cellar/cmake/3.23.2/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/Cellar/cmake/3.23.2/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/homebrew/Cellar/cmake/3.23.2/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/robbetiteca/projects/miniGUI/build/CMakeFiles /Users/robbetiteca/projects/miniGUI/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/robbetiteca/projects/sdl-gui/build/CMakeFiles /Users/robbetiteca/projects/sdl-gui/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/robbetiteca/projects/miniGUI/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/robbetiteca/projects/sdl-gui/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named minigui
+# Target rules for targets named miniGUI
 
 # Build rule for target.
-minigui: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 minigui
-.PHONY : minigui
+miniGUI: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 miniGUI
+.PHONY : miniGUI
 
 # fast build rule for target.
-minigui/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minigui.dir/build.make CMakeFiles/minigui.dir/build
-.PHONY : minigui/fast
+miniGUI/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniGUI.dir/build.make CMakeFiles/miniGUI.dir/build
+.PHONY : miniGUI/fast
 
 src/canvas/canvas.o: src/canvas/canvas.cpp.o
 .PHONY : src/canvas/canvas.o
 
 # target to build an object file
 src/canvas/canvas.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minigui.dir/build.make CMakeFiles/minigui.dir/src/canvas/canvas.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniGUI.dir/build.make CMakeFiles/miniGUI.dir/src/canvas/canvas.cpp.o
 .PHONY : src/canvas/canvas.cpp.o
 
 src/canvas/canvas.i: src/canvas/canvas.cpp.i
@@ -142,7 +142,7 @@ src/canvas/canvas.i: src/canvas/canvas.cpp.i
 
 # target to preprocess a source file
 src/canvas/canvas.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minigui.dir/build.make CMakeFiles/minigui.dir/src/canvas/canvas.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniGUI.dir/build.make CMakeFiles/miniGUI.dir/src/canvas/canvas.cpp.i
 .PHONY : src/canvas/canvas.cpp.i
 
 src/canvas/canvas.s: src/canvas/canvas.cpp.s
@@ -150,7 +150,7 @@ src/canvas/canvas.s: src/canvas/canvas.cpp.s
 
 # target to generate assembly for a file
 src/canvas/canvas.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minigui.dir/build.make CMakeFiles/minigui.dir/src/canvas/canvas.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniGUI.dir/build.make CMakeFiles/miniGUI.dir/src/canvas/canvas.cpp.s
 .PHONY : src/canvas/canvas.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -158,7 +158,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minigui.dir/build.make CMakeFiles/minigui.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniGUI.dir/build.make CMakeFiles/miniGUI.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -166,7 +166,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minigui.dir/build.make CMakeFiles/minigui.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniGUI.dir/build.make CMakeFiles/miniGUI.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -174,15 +174,87 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minigui.dir/build.make CMakeFiles/minigui.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniGUI.dir/build.make CMakeFiles/miniGUI.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/widgets/buttons/buttonWidget.o: src/widgets/buttons/buttonWidget.cpp.o
+.PHONY : src/widgets/buttons/buttonWidget.o
+
+# target to build an object file
+src/widgets/buttons/buttonWidget.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniGUI.dir/build.make CMakeFiles/miniGUI.dir/src/widgets/buttons/buttonWidget.cpp.o
+.PHONY : src/widgets/buttons/buttonWidget.cpp.o
+
+src/widgets/buttons/buttonWidget.i: src/widgets/buttons/buttonWidget.cpp.i
+.PHONY : src/widgets/buttons/buttonWidget.i
+
+# target to preprocess a source file
+src/widgets/buttons/buttonWidget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniGUI.dir/build.make CMakeFiles/miniGUI.dir/src/widgets/buttons/buttonWidget.cpp.i
+.PHONY : src/widgets/buttons/buttonWidget.cpp.i
+
+src/widgets/buttons/buttonWidget.s: src/widgets/buttons/buttonWidget.cpp.s
+.PHONY : src/widgets/buttons/buttonWidget.s
+
+# target to generate assembly for a file
+src/widgets/buttons/buttonWidget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniGUI.dir/build.make CMakeFiles/miniGUI.dir/src/widgets/buttons/buttonWidget.cpp.s
+.PHONY : src/widgets/buttons/buttonWidget.cpp.s
+
+src/widgets/buttons/textButtonWidget.o: src/widgets/buttons/textButtonWidget.cpp.o
+.PHONY : src/widgets/buttons/textButtonWidget.o
+
+# target to build an object file
+src/widgets/buttons/textButtonWidget.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniGUI.dir/build.make CMakeFiles/miniGUI.dir/src/widgets/buttons/textButtonWidget.cpp.o
+.PHONY : src/widgets/buttons/textButtonWidget.cpp.o
+
+src/widgets/buttons/textButtonWidget.i: src/widgets/buttons/textButtonWidget.cpp.i
+.PHONY : src/widgets/buttons/textButtonWidget.i
+
+# target to preprocess a source file
+src/widgets/buttons/textButtonWidget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniGUI.dir/build.make CMakeFiles/miniGUI.dir/src/widgets/buttons/textButtonWidget.cpp.i
+.PHONY : src/widgets/buttons/textButtonWidget.cpp.i
+
+src/widgets/buttons/textButtonWidget.s: src/widgets/buttons/textButtonWidget.cpp.s
+.PHONY : src/widgets/buttons/textButtonWidget.s
+
+# target to generate assembly for a file
+src/widgets/buttons/textButtonWidget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniGUI.dir/build.make CMakeFiles/miniGUI.dir/src/widgets/buttons/textButtonWidget.cpp.s
+.PHONY : src/widgets/buttons/textButtonWidget.cpp.s
+
+src/widgets/widget.o: src/widgets/widget.cpp.o
+.PHONY : src/widgets/widget.o
+
+# target to build an object file
+src/widgets/widget.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniGUI.dir/build.make CMakeFiles/miniGUI.dir/src/widgets/widget.cpp.o
+.PHONY : src/widgets/widget.cpp.o
+
+src/widgets/widget.i: src/widgets/widget.cpp.i
+.PHONY : src/widgets/widget.i
+
+# target to preprocess a source file
+src/widgets/widget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniGUI.dir/build.make CMakeFiles/miniGUI.dir/src/widgets/widget.cpp.i
+.PHONY : src/widgets/widget.cpp.i
+
+src/widgets/widget.s: src/widgets/widget.cpp.s
+.PHONY : src/widgets/widget.s
+
+# target to generate assembly for a file
+src/widgets/widget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniGUI.dir/build.make CMakeFiles/miniGUI.dir/src/widgets/widget.cpp.s
+.PHONY : src/widgets/widget.cpp.s
 
 src/window/window.o: src/window/window.cpp.o
 .PHONY : src/window/window.o
 
 # target to build an object file
 src/window/window.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minigui.dir/build.make CMakeFiles/minigui.dir/src/window/window.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniGUI.dir/build.make CMakeFiles/miniGUI.dir/src/window/window.cpp.o
 .PHONY : src/window/window.cpp.o
 
 src/window/window.i: src/window/window.cpp.i
@@ -190,7 +262,7 @@ src/window/window.i: src/window/window.cpp.i
 
 # target to preprocess a source file
 src/window/window.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minigui.dir/build.make CMakeFiles/minigui.dir/src/window/window.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniGUI.dir/build.make CMakeFiles/miniGUI.dir/src/window/window.cpp.i
 .PHONY : src/window/window.cpp.i
 
 src/window/window.s: src/window/window.cpp.s
@@ -198,7 +270,7 @@ src/window/window.s: src/window/window.cpp.s
 
 # target to generate assembly for a file
 src/window/window.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minigui.dir/build.make CMakeFiles/minigui.dir/src/window/window.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniGUI.dir/build.make CMakeFiles/miniGUI.dir/src/window/window.cpp.s
 .PHONY : src/window/window.cpp.s
 
 # Help Target
@@ -209,13 +281,22 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... minigui"
+	@echo "... miniGUI"
 	@echo "... src/canvas/canvas.o"
 	@echo "... src/canvas/canvas.i"
 	@echo "... src/canvas/canvas.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/widgets/buttons/buttonWidget.o"
+	@echo "... src/widgets/buttons/buttonWidget.i"
+	@echo "... src/widgets/buttons/buttonWidget.s"
+	@echo "... src/widgets/buttons/textButtonWidget.o"
+	@echo "... src/widgets/buttons/textButtonWidget.i"
+	@echo "... src/widgets/buttons/textButtonWidget.s"
+	@echo "... src/widgets/widget.o"
+	@echo "... src/widgets/widget.i"
+	@echo "... src/widgets/widget.s"
 	@echo "... src/window/window.o"
 	@echo "... src/window/window.i"
 	@echo "... src/window/window.s"

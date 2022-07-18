@@ -1,17 +1,32 @@
 [
 {
-  "directory": "/Users/robbetiteca/projects/miniGUI/build",
-  "command": "/usr/bin/clang++   -g -std=gnu++14 -o CMakeFiles/minigui.dir/src/main.cpp.o -c /Users/robbetiteca/projects/miniGUI/src/main.cpp",
-  "file": "/Users/robbetiteca/projects/miniGUI/src/main.cpp"
+  "directory": "/Users/robbetiteca/projects/sdl-gui/build",
+  "command": "/usr/bin/clang++  -I/Users/robbetiteca/projects/sdl-gui/miniGUI -I/opt/homebrew/include/SDL2 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -o CMakeFiles/miniGUI.dir/src/main.cpp.o -c /Users/robbetiteca/projects/sdl-gui/src/main.cpp",
+  "file": "/Users/robbetiteca/projects/sdl-gui/src/main.cpp"
 },
 {
-  "directory": "/Users/robbetiteca/projects/miniGUI/build",
-  "command": "/usr/bin/clang++   -g -std=gnu++14 -o CMakeFiles/minigui.dir/src/canvas/canvas.cpp.o -c /Users/robbetiteca/projects/miniGUI/src/canvas/canvas.cpp",
-  "file": "/Users/robbetiteca/projects/miniGUI/src/canvas/canvas.cpp"
+  "directory": "/Users/robbetiteca/projects/sdl-gui/build",
+  "command": "/usr/bin/clang++  -I/Users/robbetiteca/projects/sdl-gui/miniGUI -I/opt/homebrew/include/SDL2 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -o CMakeFiles/miniGUI.dir/src/canvas/canvas.cpp.o -c /Users/robbetiteca/projects/sdl-gui/src/canvas/canvas.cpp",
+  "file": "/Users/robbetiteca/projects/sdl-gui/src/canvas/canvas.cpp"
 },
 {
-  "directory": "/Users/robbetiteca/projects/miniGUI/build",
-  "command": "/usr/bin/clang++   -g -std=gnu++14 -o CMakeFiles/minigui.dir/src/window/window.cpp.o -c /Users/robbetiteca/projects/miniGUI/src/window/window.cpp",
-  "file": "/Users/robbetiteca/projects/miniGUI/src/window/window.cpp"
+  "directory": "/Users/robbetiteca/projects/sdl-gui/build",
+  "command": "/usr/bin/clang++  -I/Users/robbetiteca/projects/sdl-gui/miniGUI -I/opt/homebrew/include/SDL2 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -o CMakeFiles/miniGUI.dir/src/widgets/widget.cpp.o -c /Users/robbetiteca/projects/sdl-gui/src/widgets/widget.cpp",
+  "file": "/Users/robbetiteca/projects/sdl-gui/src/widgets/widget.cpp"
+},
+{
+  "directory": "/Users/robbetiteca/projects/sdl-gui/build",
+  "command": "/usr/bin/clang++  -I/Users/robbetiteca/projects/sdl-gui/miniGUI -I/opt/homebrew/include/SDL2 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -o CMakeFiles/miniGUI.dir/src/widgets/buttons/buttonWidget.cpp.o -c /Users/robbetiteca/projects/sdl-gui/src/widgets/buttons/buttonWidget.cpp",
+  "file": "/Users/robbetiteca/projects/sdl-gui/src/widgets/buttons/buttonWidget.cpp"
+},
+{
+  "directory": "/Users/robbetiteca/projects/sdl-gui/build",
+  "command": "/usr/bin/clang++  -I/Users/robbetiteca/projects/sdl-gui/miniGUI -I/opt/homebrew/include/SDL2 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -o CMakeFiles/miniGUI.dir/src/widgets/buttons/textButtonWidget.cpp.o -c /Users/robbetiteca/projects/sdl-gui/src/widgets/buttons/textButtonWidget.cpp",
+  "file": "/Users/robbetiteca/projects/sdl-gui/src/widgets/buttons/textButtonWidget.cpp"
+},
+{
+  "directory": "/Users/robbetiteca/projects/sdl-gui/build",
+  "command": "/usr/bin/clang++  -I/Users/robbetiteca/projects/sdl-gui/miniGUI -I/opt/homebrew/include/SDL2 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -o CMakeFiles/miniGUI.dir/src/window/window.cpp.o -c /Users/robbetiteca/projects/sdl-gui/src/window/window.cpp",
+  "file": "/Users/robbetiteca/projects/sdl-gui/src/window/window.cpp"
 }
 ]

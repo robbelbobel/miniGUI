@@ -1,15 +1,21 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/minigui.dir/src/canvas/canvas.cpp.o"
-  "CMakeFiles/minigui.dir/src/canvas/canvas.cpp.o.d"
-  "CMakeFiles/minigui.dir/src/main.cpp.o"
-  "CMakeFiles/minigui.dir/src/main.cpp.o.d"
-  "CMakeFiles/minigui.dir/src/window/window.cpp.o"
-  "CMakeFiles/minigui.dir/src/window/window.cpp.o.d"
-  "minigui"
-  "minigui.pdb"
+  "CMakeFiles/miniGUI.dir/src/canvas/canvas.cpp.o"
+  "CMakeFiles/miniGUI.dir/src/canvas/canvas.cpp.o.d"
+  "CMakeFiles/miniGUI.dir/src/main.cpp.o"
+  "CMakeFiles/miniGUI.dir/src/main.cpp.o.d"
+  "CMakeFiles/miniGUI.dir/src/widgets/buttons/buttonWidget.cpp.o"
+  "CMakeFiles/miniGUI.dir/src/widgets/buttons/buttonWidget.cpp.o.d"
+  "CMakeFiles/miniGUI.dir/src/widgets/buttons/textButtonWidget.cpp.o"
+  "CMakeFiles/miniGUI.dir/src/widgets/buttons/textButtonWidget.cpp.o.d"
+  "CMakeFiles/miniGUI.dir/src/widgets/widget.cpp.o"
+  "CMakeFiles/miniGUI.dir/src/widgets/widget.cpp.o.d"
+  "CMakeFiles/miniGUI.dir/src/window/window.cpp.o"
+  "CMakeFiles/miniGUI.dir/src/window/window.cpp.o.d"
+  "miniGUI"
+  "miniGUI.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
 foreach(lang CXX)
-  include(CMakeFiles/minigui.dir/cmake_clean_${lang}.cmake OPTIONAL)
+  include(CMakeFiles/miniGUI.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

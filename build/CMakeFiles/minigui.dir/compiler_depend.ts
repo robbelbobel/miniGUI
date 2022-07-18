@@ -1,2 +1,2 @@
 # CMAKE generated file: DO NOT EDIT!
-# Timestamp file for compiler generated dependencies management for minigui.
+# Timestamp file for compiler generated dependencies management for miniGUI.

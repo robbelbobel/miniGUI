@@ -45,25 +45,25 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/Cellar/cmake/3.23.2/bin/cmake
+CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.23.2/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/Cellar/cmake/3.23.2/bin/cmake -E rm -f
+RM = /opt/homebrew/Cellar/cmake/3.23.2/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/robbetiteca/projects/miniGUI
+CMAKE_SOURCE_DIR = /Users/robbetiteca/projects/sdl-gui
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/robbetiteca/projects/miniGUI/build
+CMAKE_BINARY_DIR = /Users/robbetiteca/projects/sdl-gui/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/minigui.dir/all
+all: CMakeFiles/miniGUI.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/minigui.dir/clean
+clean: CMakeFiles/miniGUI.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/minigui.dir
+# Target rules for target CMakeFiles/miniGUI.dir
 
 # All Build rule for target.
-CMakeFiles/minigui.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minigui.dir/build.make CMakeFiles/minigui.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minigui.dir/build.make CMakeFiles/minigui.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/robbetiteca/projects/miniGUI/build/CMakeFiles --progress-num=1,2,3,4 "Built target minigui"
-.PHONY : CMakeFiles/minigui.dir/all
+CMakeFiles/miniGUI.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniGUI.dir/build.make CMakeFiles/miniGUI.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniGUI.dir/build.make CMakeFiles/miniGUI.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/robbetiteca/projects/sdl-gui/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target miniGUI"
+.PHONY : CMakeFiles/miniGUI.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/minigui.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/robbetiteca/projects/miniGUI/build/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/minigui.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/robbetiteca/projects/miniGUI/build/CMakeFiles 0
-.PHONY : CMakeFiles/minigui.dir/rule
+CMakeFiles/miniGUI.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/robbetiteca/projects/sdl-gui/build/CMakeFiles 7
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/miniGUI.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/robbetiteca/projects/sdl-gui/build/CMakeFiles 0
+.PHONY : CMakeFiles/miniGUI.dir/rule
 
 # Convenience name for target.
-minigui: CMakeFiles/minigui.dir/rule
-.PHONY : minigui
+miniGUI: CMakeFiles/miniGUI.dir/rule
+.PHONY : miniGUI
 
 # clean rule for target.
-CMakeFiles/minigui.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minigui.dir/build.make CMakeFiles/minigui.dir/clean
-.PHONY : CMakeFiles/minigui.dir/clean
+CMakeFiles/miniGUI.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniGUI.dir/build.make CMakeFiles/miniGUI.dir/clean
+.PHONY : CMakeFiles/miniGUI.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
