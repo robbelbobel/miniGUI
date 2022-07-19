@@ -23,13 +23,9 @@ int main(){
 
 	window.setCanvas(&canvas);
 
-	unsigned int i = 0;
-
-	// while(!window.shouldClose()){
-	while(i < 1000){
+	while(!window.shouldClose()){
 		window.update();
 		window.draw();
-		i++;
 	}
 	
 	return 0;

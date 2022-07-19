@@ -2,7 +2,6 @@
 #define BUTTONWIDGET_HPP
 
 #include <SDL.h>
-#include <iostream> // DEBUG
 
 #include "../widget.hpp"
 
