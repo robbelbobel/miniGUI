@@ -5,10 +5,14 @@ miniGUI::Window::Window(Vector2i size, std::string title){
 	miniGUI::Window::closed = false;
 
 	SDL_Init(SDL_INIT_EVERYTHING);
-	miniGUI::Window::sdlWindow = SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, size.x, size.y, SDL_WINDOW_SHOWN);
+	TTF_Init();
+	
+	miniGUI::Window::sdlWindow 	= SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, size.x, size.y, SDL_WINDOW_SHOWN);
+	miniGUI::Window::renderer 	= SDL_CreateRenderer(miniGUI::Window::sdlWindow, -1, SDL_RENDERER_ACCELERATED);
 }
 
 miniGUI::Window::~Window(){
+	SDL_DestroyRenderer(miniGUI::Window::renderer);
 	SDL_DestroyWindow(miniGUI::Window::sdlWindow);
 	SDL_Quit();
 }
@@ -20,7 +24,21 @@ void miniGUI::Window::update(){
 }
 
 void miniGUI::Window::draw(){
-	miniGUI::Window::canvas -> __draw();
+	// Draw Background
+	SDL_Rect rect;
+	rect.x = 0;
+	rect.y = 0;
+	rect.w = miniGUI::Window::size.x;
+	rect.h = miniGUI::Window::size.y;
+	
+	SDL_SetRenderDrawColor(miniGUI::Window::renderer, 0, 0, 0, 0xFF);
+	SDL_RenderFillRect(miniGUI::Window::renderer, &rect);
+
+	// Draw Canvas
+	miniGUI::Window::canvas -> __draw(miniGUI::Window::renderer);
+
+	// Present Rendering
+	SDL_RenderPresent(miniGUI::Window::renderer);
 }
 
 void miniGUI::Window::setCanvas(Canvas* canvas){

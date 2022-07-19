@@ -20,17 +20,16 @@ namespace miniGUI{
 
         // Updating & Drawing
         virtual void __update(__InputState_t* inputState);
-        virtual void __draw();
+        virtual void __draw(SDL_Renderer* renderer);
 
     protected:
         /** PROTECTED CLASS FUNCTIONS **/
-        Widget();
+        Widget(Vector2i position, Vector2i size);
 
         /** PROTECTED CLASS VARIABLES **/
         bool enabled;
 
-        miniGUI::Vector2i position;
-        miniGUI::Vector2i size;
+        SDL_Rect rect;
     };
 }
 

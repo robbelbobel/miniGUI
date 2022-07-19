@@ -1,3 +1,5 @@
+#include <string>
+
 #include "window/window.hpp"
 #include "widgets/buttons/textButtonWidget.hpp"
 
@@ -10,18 +12,24 @@ int main(){
 	// Create Canvas
 	miniGUI::Canvas canvas;
 
+	// Create Text
+	miniGUI::Text text("text", "/Users/robbetiteca/Downloads/Roboto/Roboto-Black.ttf", 64, (uint32_t) 0xFFFFFF);
+
 	// Create TextButtonWidget
-	size.x = 100;
-	size.y = 100;
-	miniGUI::TextButtonWidget tbWidget(size);
+	miniGUI::TextButtonWidget tbWidget(miniGUI::Vector2i(200, 20), miniGUI::Vector2i(200, 100), &text);
+
 
 	canvas.addWidget(&tbWidget);
 
 	window.setCanvas(&canvas);
 
-	while(!window.shouldClose()){
+	unsigned int i = 0;
+
+	// while(!window.shouldClose()){
+	while(i < 1000){
 		window.update();
 		window.draw();
+		i++;
 	}
 	
 	return 0;

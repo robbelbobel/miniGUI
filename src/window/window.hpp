@@ -2,7 +2,7 @@
 #define WINDOW_H
 
 #include <stdint.h>
-#include <string>
+#include <SDL_ttf.h>
 
 #include "../inputState/inputState.hpp"
 #include "../canvas/canvas.hpp"
@@ -28,6 +28,7 @@ namespace miniGUI{
 
 		/** PRIVATE CLASS VARIABLES **/
 		SDL_Window* sdlWindow;
+		SDL_Renderer* renderer;
 
 		miniGUI::Vector2i size;
 		miniGUI::Canvas* canvas;

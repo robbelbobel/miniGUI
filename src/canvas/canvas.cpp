@@ -15,7 +15,7 @@ void miniGUI::Canvas::__update(__InputState_t* inputState){
     for(size_t i = 0; i < miniGUI::Canvas::widgets.size(); i++) miniGUI::Canvas::widgets.at(i) -> __update(inputState);
 }
 
-void miniGUI::Canvas::__draw(){
+void miniGUI::Canvas::__draw(SDL_Renderer* renderer){
     // Draw Every Widget
-    for(size_t i = 0; i < miniGUI::Canvas::widgets.size(); i++) miniGUI::Canvas::widgets.at(i) -> __draw();
+    for(size_t i = 0; i < miniGUI::Canvas::widgets.size(); i++) miniGUI::Canvas::widgets.at(i) -> __draw(renderer);
 }
