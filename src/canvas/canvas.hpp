@@ -2,7 +2,6 @@
 #define CANVAS_HPP
 
 #include <vector>
-#include <iostream>
 
 #include "../widgets/widget.hpp"
 

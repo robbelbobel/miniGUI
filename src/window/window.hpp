@@ -1,6 +1,7 @@
 #ifndef WINDOW_H
 #define WINDOW_H
 
+#include <string>
 #include <stdint.h>
 #include <SDL_ttf.h>
 
