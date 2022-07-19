@@ -15,10 +15,11 @@ namespace miniGUI{
         virtual void __draw(SDL_Renderer* renderer);
 
     protected:
-        ButtonWidget(Vector2i position, Vector2i size);
+        ButtonWidget(Vector2i position, Vector2i size, uint32_t color);
 
         bool clicked;
         bool hovering;
+        SDL_Color color;
     };
 }
 

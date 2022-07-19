@@ -9,11 +9,11 @@
 namespace miniGUI{
     class Text{
     public:
-        Text(std::string text, std::string fontPath, int size, uint32_t color);
+        Text(std::string text, std::string fontPath, int size, uint32_t color = 0x000000FF);
         ~Text();
         
-        void setText(std::string &text);
-        void setFont(std::string &fontPath);
+        void setText(std::string text);
+        void setFont(std::string fontPath);
         void setSize(int size);
         void setColor(uint32_t color);
 
@@ -23,9 +23,9 @@ namespace miniGUI{
         void createSurface();
 
         std::string text;
-        std::string fontPath;
+        TTF_Font* font;
         int size;
-        uint32_t color;
+        SDL_Color color;
 
         SDL_Surface* surface;
     };

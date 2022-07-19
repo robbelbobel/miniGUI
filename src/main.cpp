@@ -13,19 +13,24 @@ int main(){
 	miniGUI::Canvas canvas;
 
 	// Create Text
-	miniGUI::Text text("text", "/Users/robbetiteca/Downloads/Roboto/Roboto-Black.ttf", 64, (uint32_t) 0xFFFFFF);
+	miniGUI::Text text("text", "/Users/robbetiteca/Downloads/Roboto/Roboto-Black.ttf", 64, 0xFFFFFFFF);
 
 	// Create TextButtonWidget
-	miniGUI::TextButtonWidget tbWidget(miniGUI::Vector2i(200, 20), miniGUI::Vector2i(200, 100), &text);
-
+	miniGUI::TextButtonWidget tbWidget(miniGUI::Vector2i(200, 20), miniGUI::Vector2i(200, 100), &text, 0x00FFFFFF);
 
 	canvas.addWidget(&tbWidget);
 
 	window.setCanvas(&canvas);
 
+	unsigned int i = 0;
+
 	while(!window.shouldClose()){
 		window.update();
 		window.draw();
+
+		text.setText(std::to_string(i));
+
+		i++;
 	}
 	
 	return 0;

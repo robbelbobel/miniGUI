@@ -3,25 +3,30 @@
 miniGUI::Text::Text(std::string text, std::string fontPath, int size, uint32_t color){
     // Assign Class Variables
     miniGUI::Text::text     = text;
-    miniGUI::Text::fontPath = fontPath;
+    miniGUI::Text::font     = TTF_OpenFont(fontPath.c_str(), size);
     miniGUI::Text::size     = size;
-    miniGUI::Text::color    = color;
 
-    // Create Text Surface
-    miniGUI::Text::createSurface();
+    miniGUI::Text::color.r = (color  & 0xFF000000)  >> 24;
+    miniGUI::Text::color.g = (color & 0xFF0000)     >> 16;
+    miniGUI::Text::color.b = (color & 0xFF00)       >> 8;
+    miniGUI::Text::color.a =  color & 0xFF;
+
+    // Load Font And Create Text Surface
+    miniGUI::Text::setFont(fontPath);
 }
 
 miniGUI::Text::~Text(){
     SDL_FreeSurface(miniGUI::Text::surface);
 }
 
-void miniGUI::Text::setText(std::string &text){
+void miniGUI::Text::setText(std::string text){
     miniGUI::Text::text = text;
     miniGUI::Text::createSurface();
 }
 
-void miniGUI::Text::setFont(std::string &fontPath){
-    miniGUI::Text::fontPath = fontPath;
+void miniGUI::Text::setFont(std::string fontPath){
+    free(miniGUI::Text::font);
+    miniGUI::Text::font = TTF_OpenFont(fontPath.c_str(), miniGUI::Text::size);
     miniGUI::Text::createSurface();
 }
 
@@ -31,7 +36,11 @@ void miniGUI::Text::setSize(int size){
 }
 
 void miniGUI::Text::setColor(uint32_t color){
-    miniGUI::Text::color = color;
+    miniGUI::Text::color.r = (color  & 0xFF000000)  >> 24;
+    miniGUI::Text::color.g = (color & 0xFF0000)     >> 16;
+    miniGUI::Text::color.b = (color & 0xFF00)       >> 8;
+    miniGUI::Text::color.a =  color & 0xFF;
+
     miniGUI::Text::createSurface();
 }
 
@@ -40,23 +49,14 @@ SDL_Surface* miniGUI::Text::__getSurface(){
 }
 
 void miniGUI::Text::createSurface(){
-    // Load Font
-    TTF_Font* font = TTF_OpenFont(miniGUI::Text::fontPath.c_str(), miniGUI::Text::size);
+    // Check If Font Was Loaded Correctly
+    if(font == NULL) std::cerr << "Font failed to load. " << std::endl << "TTF Error: " << TTF_GetError() << std::endl;
 
-    if(font == NULL) std::cerr << "Failed to load Font. " << std::endl << "TTF Error: " << TTF_GetError() << std::endl;
-
-    // Convert Color to SDL Color
-    SDL_Color sdlColor;
-    sdlColor.r = color & 0xFF;
-    sdlColor.g = color & 0x00FF     << 8;
-    sdlColor.b = color & 0x0000FF   << 16;
-    sdlColor.a = color & 0x000000FF << 24;
+    // Free Old Surface
+    SDL_FreeSurface(miniGUI::Text::surface);
     
     // Create Surface
-    miniGUI::Text::surface = TTF_RenderText_Blended(font, miniGUI::Text::text.c_str(), sdlColor);
+    miniGUI::Text::surface = TTF_RenderText_Blended(font, miniGUI::Text::text.c_str(), miniGUI::Text::color);
 
     if(miniGUI::Text::surface == nullptr) std::cerr << "Failed to render text" << std::endl;
-
-    // Free Font
-    free(font);
 }

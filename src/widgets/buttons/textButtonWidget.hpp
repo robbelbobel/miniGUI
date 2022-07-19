@@ -7,7 +7,7 @@
 namespace miniGUI{
     class TextButtonWidget : public ButtonWidget{
     public:
-        TextButtonWidget(miniGUI::Vector2i position, miniGUI::Vector2i size, miniGUI::Text* text);
+        TextButtonWidget(miniGUI::Vector2i position, miniGUI::Vector2i size, miniGUI::Text* text, uint32_t color = 0xFFFFFFFF);
 
         Text* getText();
 
