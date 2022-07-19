@@ -1,3 +1,0 @@
-/Users/robbetiteca/projects/sdl-gui/build/CMakeFiles/miniGUI.dir
-/Users/robbetiteca/projects/sdl-gui/build/CMakeFiles/edit_cache.dir
-/Users/robbetiteca/projects/sdl-gui/build/CMakeFiles/rebuild_cache.dir
