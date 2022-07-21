@@ -2,20 +2,21 @@
 #define TEXT_HPP
 
 #include <iostream>
-#include <string>
-#include <SDL.h>
 #include <SDL_ttf.h>
 
 namespace miniGUI{
     class Text{
     public:
-        Text(std::string text, std::string fontPath, int size, uint32_t color = 0x000000FF);
+        Text(std::string text, std::string fontPath, int fontSize, uint32_t color = 0x000000FF);
         ~Text();
         
         void setText(std::string text);
         void setFont(std::string fontPath);
         void setSize(int size);
         void setColor(uint32_t color);
+
+        int getWidth();
+        int getHeight();
 
         SDL_Surface* __getSurface();
 

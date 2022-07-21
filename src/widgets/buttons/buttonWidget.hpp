@@ -5,8 +5,8 @@
 
 #include "../widget.hpp"
 
-namespace miniGUI{
-    class ButtonWidget : public Widget{
+namespace miniGUI {
+    class ButtonWidget : public Widget {
     public:
         bool isClicked();
         bool isHovering();
@@ -15,11 +15,10 @@ namespace miniGUI{
         virtual void __draw(SDL_Renderer* renderer);
 
     protected:
-        ButtonWidget(Vector2i position, Vector2i size, uint32_t color);
+        ButtonWidget(miniGUI::Vector2i position, miniGUI::Vector2i size);
 
         bool clicked;
         bool hovering;
-        SDL_Color color;
     };
 }
 

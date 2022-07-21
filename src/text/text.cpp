@@ -1,10 +1,11 @@
 #include "text.hpp"
 
-miniGUI::Text::Text(std::string text, std::string fontPath, int size, uint32_t color){
+miniGUI::Text::Text(std::string text, std::string fontPath, int fontSize, uint32_t color){
     // Assign Class Variables
     miniGUI::Text::text     = text;
-    miniGUI::Text::font     = TTF_OpenFont(fontPath.c_str(), size);
-    miniGUI::Text::size     = size;
+    miniGUI::Text::font     = TTF_OpenFont(fontPath.c_str(), fontSize);
+    miniGUI::Text::size     = fontSize;
+    miniGUI::Text::surface  = nullptr;
 
     miniGUI::Text::color.r = (color  & 0xFF000000)  >> 24;
     miniGUI::Text::color.g = (color & 0xFF0000)     >> 16;
@@ -44,13 +45,21 @@ void miniGUI::Text::setColor(uint32_t color){
     miniGUI::Text::createSurface();
 }
 
+int miniGUI::Text::getWidth(){
+    return miniGUI::Text::surface -> w;
+}
+
+int miniGUI::Text::getHeight(){
+    return miniGUI::Text::surface -> h;
+}
+
 SDL_Surface* miniGUI::Text::__getSurface(){
     return miniGUI::Text::surface;
 }
 
 void miniGUI::Text::createSurface(){
     // Check If Font Was Loaded Correctly
-    if(font == NULL) std::cerr << "Font failed to load. " << std::endl << "TTF Error: " << TTF_GetError() << std::endl;
+    if(miniGUI::Text::font == nullptr) std::cerr << "Font failed to load. " << std::endl << "SDL_TTF Error: " << TTF_GetError() << std::endl;
 
     // Free Old Surface
     SDL_FreeSurface(miniGUI::Text::surface);

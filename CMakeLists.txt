@@ -10,11 +10,14 @@ add_executable(${PROJECT_NAME}  src/main.cpp
                                 src/widgets/widget.cpp
                                 src/widgets/buttons/buttonWidget.cpp
                                 src/widgets/buttons/textButtonWidget.cpp
+                                src/widgets/buttons/imageButtonWidget.cpp
                                 src/window/window.cpp
-                                src/text/text.cpp)
+                                src/text/text.cpp
+                                src/image/image.cpp)
                                 
 find_package(SDL2 REQUIRED)
 find_package(SDL2_ttf REQUIRED)
+find_package(SDL2_image REQUIRED)
 
-include_directories(${PROJECT_NAME} ${SDL2_INCLUDE_DIR} ${SDL2_TTF_INCLUDE_DIRS})
-target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARY} ${SDL2_TTF_LIBRARIES})
+include_directories(${PROJECT_NAME} ${SDL2_INCLUDE_DIR} ${SDL2_TTF_INCLUDE_DIRS} ${SDL2_IMAGE_INCLUDE_DIRS})
+target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARY} ${SDL2_TTF_LIBRARIES} ${SDL2_IMAGE_LIBRARIES})

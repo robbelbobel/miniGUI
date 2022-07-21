@@ -9,12 +9,15 @@ namespace miniGUI{
     public:
         TextButtonWidget(miniGUI::Vector2i position, miniGUI::Vector2i size, miniGUI::Text* text, uint32_t color = 0xFFFFFFFF);
 
-        Text* getText();
+        miniGUI::Text* getText();
+        void setText(miniGUI::Text* text);
 
         virtual void __draw(SDL_Renderer* renderer);
 
     private:
         Text* text;
+
+        SDL_Color color;
     };
 }
 #endif
