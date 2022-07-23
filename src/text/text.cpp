@@ -6,11 +6,12 @@ miniGUI::Text::Text(std::string text, std::string fontPath, int fontSize, uint32
     miniGUI::Text::font     = TTF_OpenFont(fontPath.c_str(), fontSize);
     miniGUI::Text::size     = fontSize;
     miniGUI::Text::surface  = nullptr;
+    miniGUI::Text::texture  = nullptr;
 
-    miniGUI::Text::color.r = (color  & 0xFF000000)  >> 24;
-    miniGUI::Text::color.g = (color & 0xFF0000)     >> 16;
-    miniGUI::Text::color.b = (color & 0xFF00)       >> 8;
-    miniGUI::Text::color.a =  color & 0xFF;
+    miniGUI::Text::color.r  = (color  & 0xFF000000)  >> 24;
+    miniGUI::Text::color.g  = (color & 0xFF0000)     >> 16;
+    miniGUI::Text::color.b  = (color & 0xFF00)       >> 8;
+    miniGUI::Text::color.a  =  color & 0xFF;
 
     // Load Font And Create Text Surface
     miniGUI::Text::setFont(fontPath);
@@ -53,8 +54,17 @@ int miniGUI::Text::getHeight(){
     return miniGUI::Text::surface -> h;
 }
 
-SDL_Surface* miniGUI::Text::__getSurface(){
-    return miniGUI::Text::surface;
+void miniGUI::Text::__draw(SDL_Renderer* renderer, SDL_Rect rect){
+    // Generate Texture If Not Present
+    if(miniGUI::Text::texture == nullptr){
+        miniGUI::Text::texture = SDL_CreateTextureFromSurface(renderer, miniGUI::Text::surface);
+
+        // Free Surface
+        SDL_FreeSurface(miniGUI::Text::surface);
+        miniGUI::Text::surface = nullptr;
+    }
+
+    SDL_RenderCopy(renderer, texture, NULL, &rect);
 }
 
 void miniGUI::Text::createSurface(){
@@ -66,6 +76,9 @@ void miniGUI::Text::createSurface(){
     
     // Create Surface
     miniGUI::Text::surface = TTF_RenderText_Blended(font, miniGUI::Text::text.c_str(), miniGUI::Text::color);
-
     if(miniGUI::Text::surface == nullptr) std::cerr << "Failed to render text" << std::endl;
+
+    // Destroy Old Texture
+    SDL_DestroyTexture(miniGUI::Text::texture);
+    miniGUI::Text::texture = nullptr;
 }

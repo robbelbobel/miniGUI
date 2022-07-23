@@ -16,7 +16,7 @@ int main(){
 	// Create Text
 	miniGUI::Text text("text", "/Users/robbetiteca/Downloads/Roboto/Roboto-Black.ttf", 64, 0xFFFFFFFF);
 	// Create TextButtonWidget
-	miniGUI::TextButtonWidget tbWidget(miniGUI::Vector2i(200, 20), miniGUI::Vector2i(200, 100), &text, 0x00FFFFFF);
+	miniGUI::TextButtonWidget tbWidget(miniGUI::Vector2i(200, 20), miniGUI::Vector2i(300, 100), &text, 0x00FFFFFF);
 
 	// Create Image
 	miniGUI::Image image("/Users/robbetiteca/Downloads/image.jpg");
@@ -29,15 +29,24 @@ int main(){
 
 	// Set Active Canvas
 	window.setCanvas(&canvas);
-	
-	unsigned int i = 0;
+
 	while(!window.shouldClose()){
 		window.update();
 		window.draw();
 
-		text.setText(std::to_string(i));
+		if(tbWidget.isHovering()){
+			tbWidget.getText() -> setText("Hovering");
+			tbWidget.getText() -> setSize(32);
+		} 
+		else{
+			tbWidget.getText() -> setText("Text");
+			tbWidget.getText() -> setSize(64);
+		}
 
-		i++;
+
+		if(ibWidget.isHovering()) ibWidget.getImage() -> setImage("/Users/robbetiteca/Downloads/image2.png");
+		else ibWidget.getImage() -> setImage("/Users/robbetiteca/Downloads/image.jpg");
+		
 	}
 	
 	return 0;

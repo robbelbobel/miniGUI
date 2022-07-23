@@ -4,16 +4,20 @@
 #include <string>
 
 #include "../widget.hpp"
+#include "../../text/Text.hpp"
 
 namespace miniGUI{
     class TextWidget : public Widget{
     public:
-        TextWidget();
+        TextWidget(miniGUI::Vector2i position, miniGUI::Vector2i size, miniGUI::Text* text);
+        ~TextWidget();
 
-        void setText(std::string &text);
+        void setText(miniGUI::Text* text);
+
+        virtual void __draw(SDL_Renderer* renderer);
 
     private:
-        std::string text;
+        miniGUI::Text* text;
     };
 }
 

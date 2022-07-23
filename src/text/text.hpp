@@ -4,6 +4,8 @@
 #include <iostream>
 #include <SDL_ttf.h>
 
+#include "../vector/vector.hpp"
+
 namespace miniGUI{
     class Text{
     public:
@@ -18,7 +20,7 @@ namespace miniGUI{
         int getWidth();
         int getHeight();
 
-        SDL_Surface* __getSurface();
+        void __draw(SDL_Renderer* renderer, SDL_Rect rect);
 
     private:
         void createSurface();
@@ -29,6 +31,7 @@ namespace miniGUI{
         SDL_Color color;
 
         SDL_Surface* surface;
+        SDL_Texture* texture;
     };
 }
 

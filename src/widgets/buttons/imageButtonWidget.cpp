@@ -13,13 +13,5 @@ void miniGUI::ImageButtonWidget::setImage(miniGUI::Image* image){
 }
 
 void miniGUI::ImageButtonWidget::__draw(SDL_Renderer* renderer){
-    // Draw Image
-    SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, miniGUI::ImageButtonWidget::image -> __getSurface());
-
-    SDL_Rect destRect = miniGUI::ButtonWidget::rect;
-
-    SDL_RenderCopy(renderer, texture, NULL, &destRect);
-
-    // Destroy Texture
-    SDL_DestroyTexture(texture);
+    miniGUI::ImageButtonWidget::image -> __draw(renderer, miniGUI::ImageButtonWidget::rect);
 }
