@@ -12,6 +12,10 @@ void miniGUI::TextWidget::setText(miniGUI::Text*text){
     miniGUI::TextWidget::text = text;
 }
 
+miniGUI::Text* miniGUI::TextWidget::getText(){
+    return miniGUI::TextWidget::text;
+}
+
 void miniGUI::TextWidget::__draw(SDL_Renderer* renderer){
-    
+    miniGUI::TextWidget::text -> __draw(renderer, miniGUI::Widget::rect);
 }

@@ -3,6 +3,7 @@
 #include "window/window.hpp"
 #include "widgets/buttons/textButtonWidget.hpp"
 #include "widgets/buttons/imageButtonWidget.hpp"
+#include "widgets/text/textWidget.hpp"
 
 int main(){
 	miniGUI::Vector2i size(500, 300);
@@ -23,9 +24,15 @@ int main(){
 	// Create ImageButtonWidget
 	miniGUI::ImageButtonWidget ibWidget(miniGUI::Vector2i(0, 0), miniGUI::Vector2i(200, 200), &image);
 
+	// Create Title
+	miniGUI::Text title("title", "/Users/robbetiteca/Downloads/Roboto/Roboto-Black.ttf", 64, 0xFFFFFFFF);
+	// Create Text Widget
+	miniGUI::TextWidget tWidget(miniGUI::Vector2i(0, 0), miniGUI::Vector2i(500, 50), &title);
+
 	// Add Widgets to Canvas
 	canvas.addWidget(&tbWidget);
 	canvas.addWidget(&ibWidget);
+	canvas.addWidget(&tWidget);
 
 	// Set Active Canvas
 	window.setCanvas(&canvas);

@@ -4,7 +4,7 @@
 #include <string>
 
 #include "../widget.hpp"
-#include "../../text/Text.hpp"
+#include "../../text/text.hpp"
 
 namespace miniGUI{
     class TextWidget : public Widget{
@@ -13,6 +13,7 @@ namespace miniGUI{
         ~TextWidget();
 
         void setText(miniGUI::Text* text);
+        miniGUI::Text* getText();
 
         virtual void __draw(SDL_Renderer* renderer);
 

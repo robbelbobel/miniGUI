@@ -11,6 +11,7 @@ add_executable(${PROJECT_NAME}  src/main.cpp
                                 src/widgets/buttons/buttonWidget.cpp
                                 src/widgets/buttons/textButtonWidget.cpp
                                 src/widgets/buttons/imageButtonWidget.cpp
+                                src/widgets/text/textWidget.cpp
                                 src/window/window.cpp
                                 src/text/text.cpp
                                 src/image/image.cpp)
