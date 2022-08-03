@@ -1,13 +1,13 @@
 #ifndef TEXT_HPP
 #define TEXT_HPP
 
-#include <iostream>
 #include <SDL_ttf.h>
 
-#include "../vector/vector.hpp"
+#include "../element.hpp"
+#include "../../vector/vector.hpp"
 
 namespace miniGUI{
-    class TextElement{
+    class TextElement : public miniGUI::Element{
     public:
         TextElement(std::string text, std::string fontPath, int fontSize, uint32_t color = 0x000000FF);
         ~TextElement();
@@ -17,10 +17,10 @@ namespace miniGUI{
         void setSize(int size);
         void setColor(uint32_t color);
 
-        int getWidth();
-        int getHeight();
+        virtual int getWidth();
+        virtual int getHeight();
 
-        void __draw(SDL_Renderer* renderer, SDL_Rect rect);
+        virtual void __draw(SDL_Renderer* renderer, SDL_Rect rect);
 
     private:
         void createSurface();

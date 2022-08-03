@@ -13,8 +13,9 @@ add_executable(${PROJECT_NAME}  src/main.cpp
                                 src/widgets/buttons/imageButtonWidget.cpp
                                 src/widgets/text/textWidget.cpp
                                 src/window/window.cpp
-                                src/text/textElement.cpp
-                                src/image/imageElement.cpp)
+                                src/elements/text/textElement.cpp
+                                src/elements/image/imageElement.cpp
+                                src/elements/element.cpp)
                                 
 find_package(SDL2 REQUIRED)
 find_package(SDL2_ttf REQUIRED)

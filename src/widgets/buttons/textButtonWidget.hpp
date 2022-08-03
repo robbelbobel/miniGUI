@@ -2,7 +2,7 @@
 #define TEXTBUTTONWIDGET_HPP
 
 #include "buttonWidget.hpp"
-#include "../../text/textElement.hpp"
+#include "../../elements/text/textElement.hpp"
 
 namespace miniGUI{
     class TextButtonWidget : public ButtonWidget{

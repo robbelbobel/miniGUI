@@ -1,21 +1,22 @@
 #ifndef IMAGE_HPP
 #define IMAGE_HPP
 
-#include <iostream>
 #include <SDL_image.h>
 
+#include "../element.hpp"
+
 namespace miniGUI{
-    class ImageElement{
+    class ImageElement : public miniGUI::Element{
     public:
         ImageElement(std::string path);
         ~ImageElement();
 
         void setImage(std::string path);
 
-        int getWidth();
-        int getHeight();
+        virtual int getWidth();
+        virtual int getHeight();
 
-        void __draw(SDL_Renderer* renderer, SDL_Rect rect);
+        virtual void __draw(SDL_Renderer* renderer, SDL_Rect rect);
 
     private:
         SDL_Surface* surface;

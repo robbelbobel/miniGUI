@@ -2,7 +2,7 @@
 #define IMAGEBUTTONWIDGET_HPP
 
 #include "buttonWidget.hpp"
-#include "../../image/imageElement.hpp"
+#include "../../elements/image/imageElement.hpp"
 
 namespace miniGUI {
     class ImageButtonWidget : public ButtonWidget {

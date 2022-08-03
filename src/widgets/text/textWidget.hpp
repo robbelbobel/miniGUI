@@ -4,7 +4,7 @@
 #include <string>
 
 #include "../widget.hpp"
-#include "../../text/textElement.hpp"
+#include "../../elements/text/textElement.hpp"
 
 namespace miniGUI{
     class TextWidget : public Widget{
