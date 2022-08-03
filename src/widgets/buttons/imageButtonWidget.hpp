@@ -2,20 +2,20 @@
 #define IMAGEBUTTONWIDGET_HPP
 
 #include "buttonWidget.hpp"
-#include "../../image/image.hpp"
+#include "../../image/imageElement.hpp"
 
 namespace miniGUI {
     class ImageButtonWidget : public ButtonWidget {
     public:
-        ImageButtonWidget(miniGUI::Vector2i position, miniGUI::Vector2i size, miniGUI::Image* image);
+        ImageButtonWidget(miniGUI::Vector2i position, miniGUI::Vector2i size, miniGUI::ImageElement* ImageElement);
 
-        miniGUI::Image* getImage();
-        void setImage(miniGUI::Image* image);
+        miniGUI::ImageElement* getImageElement();
+        void setImageElement(miniGUI::ImageElement* image);
 
         virtual void __draw(SDL_Renderer* renderer);
 
     private:
-        miniGUI::Image* image;
+        miniGUI::ImageElement* imageElement;
     };
 }
 

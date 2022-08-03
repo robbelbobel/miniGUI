@@ -1,21 +1,21 @@
 #include "textWidget.hpp"
 
-miniGUI::TextWidget::TextWidget(miniGUI::Vector2i position, miniGUI::Vector2i size, miniGUI::Text* text) : miniGUI::Widget::Widget(position, size){
-    miniGUI::TextWidget::setText(text);
+miniGUI::TextWidget::TextWidget(miniGUI::Vector2i position, miniGUI::Vector2i size, miniGUI::TextElement* text) : miniGUI::Widget::Widget(position, size){
+    miniGUI::TextWidget::setTextElement(text);
 }
 
 miniGUI::TextWidget::~TextWidget(){
     ;
 }
 
-void miniGUI::TextWidget::setText(miniGUI::Text*text){
-    miniGUI::TextWidget::text = text;
+void miniGUI::TextWidget::setTextElement(miniGUI::TextElement* textElement){
+    miniGUI::TextWidget::textElement = textElement;
 }
 
-miniGUI::Text* miniGUI::TextWidget::getText(){
-    return miniGUI::TextWidget::text;
+miniGUI::TextElement* miniGUI::TextWidget::getTextElement(){
+    return miniGUI::TextWidget::textElement;
 }
 
 void miniGUI::TextWidget::__draw(SDL_Renderer* renderer){
-    miniGUI::TextWidget::text -> __draw(renderer, miniGUI::Widget::rect);
+    miniGUI::TextWidget::textElement -> __draw(renderer, miniGUI::Widget::rect);
 }

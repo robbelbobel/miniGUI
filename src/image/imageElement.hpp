@@ -5,10 +5,10 @@
 #include <SDL_image.h>
 
 namespace miniGUI{
-    class Image{
+    class ImageElement{
     public:
-        Image(std::string path);
-        ~Image();
+        ImageElement(std::string path);
+        ~ImageElement();
 
         void setImage(std::string path);
 

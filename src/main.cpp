@@ -15,17 +15,17 @@ int main(){
 	miniGUI::Canvas canvas;
 
 	// Create Text
-	miniGUI::Text text("text", "/Users/robbetiteca/Downloads/Roboto/Roboto-Black.ttf", 64, 0xFFFFFFFF);
+	miniGUI::TextElement textElement("text", "/Users/robbetiteca/Downloads/Roboto/Roboto-Black.ttf", 64, 0xFFFFFFFF);
 	// Create TextButtonWidget
-	miniGUI::TextButtonWidget tbWidget(miniGUI::Vector2i(200, 20), miniGUI::Vector2i(300, 100), &text, 0x00FFFFFF);
+	miniGUI::TextButtonWidget tbWidget(miniGUI::Vector2i(200, 20), miniGUI::Vector2i(300, 100), &textElement, 0x00FFFFFF);
 
 	// Create Image
-	miniGUI::Image image("/Users/robbetiteca/Downloads/image.jpg");
+	miniGUI::ImageElement imageElement("/Users/robbetiteca/Downloads/image.jpg");
 	// Create ImageButtonWidget
-	miniGUI::ImageButtonWidget ibWidget(miniGUI::Vector2i(0, 0), miniGUI::Vector2i(200, 200), &image);
+	miniGUI::ImageButtonWidget ibWidget(miniGUI::Vector2i(0, 0), miniGUI::Vector2i(200, 200), &imageElement);
 
 	// Create Title
-	miniGUI::Text title("title", "/Users/robbetiteca/Downloads/Roboto/Roboto-Black.ttf", 64, 0xFFFFFFFF);
+	miniGUI::TextElement title("title", "/Users/robbetiteca/Downloads/Roboto/Roboto-Black.ttf", 64, 0xFFFFFFFF);
 	// Create Text Widget
 	miniGUI::TextWidget tWidget(miniGUI::Vector2i(0, 0), miniGUI::Vector2i(500, 50), &title);
 
@@ -42,17 +42,17 @@ int main(){
 		window.draw();
 
 		if(tbWidget.isHovering()){
-			tbWidget.getText() -> setText("Hovering");
-			tbWidget.getText() -> setSize(32);
+			tbWidget.getTextElement() -> setText("Hovering");
+			tbWidget.getTextElement() -> setSize(32);
 		} 
 		else{
-			tbWidget.getText() -> setText("Text");
-			tbWidget.getText() -> setSize(64);
+			tbWidget.getTextElement() -> setText("Text");
+			tbWidget.getTextElement() -> setSize(64);
 		}
 
 
-		if(ibWidget.isHovering()) ibWidget.getImage() -> setImage("/Users/robbetiteca/Downloads/image2.png");
-		else ibWidget.getImage() -> setImage("/Users/robbetiteca/Downloads/image.jpg");
+		if(ibWidget.isHovering()) ibWidget.getImageElement() -> setImage("/Users/robbetiteca/Downloads/image2.png");
+		else ibWidget.getImageElement() -> setImage("/Users/robbetiteca/Downloads/image.jpg");
 		
 	}
 	

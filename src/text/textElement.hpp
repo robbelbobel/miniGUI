@@ -7,10 +7,10 @@
 #include "../vector/vector.hpp"
 
 namespace miniGUI{
-    class Text{
+    class TextElement{
     public:
-        Text(std::string text, std::string fontPath, int fontSize, uint32_t color = 0x000000FF);
-        ~Text();
+        TextElement(std::string text, std::string fontPath, int fontSize, uint32_t color = 0x000000FF);
+        ~TextElement();
         
         void setText(std::string text);
         void setFont(std::string fontPath);

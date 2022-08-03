@@ -1,17 +1,17 @@
 #include "imageButtonWidget.hpp"
 
-miniGUI::ImageButtonWidget::ImageButtonWidget(miniGUI::Vector2i position, miniGUI::Vector2i size, miniGUI::Image* image) : miniGUI::ButtonWidget::ButtonWidget(position, size){
-    miniGUI::ImageButtonWidget::image = image;
+miniGUI::ImageButtonWidget::ImageButtonWidget(miniGUI::Vector2i position, miniGUI::Vector2i size, miniGUI::ImageElement* ImageElement) : miniGUI::ButtonWidget::ButtonWidget(position, size){
+    miniGUI::ImageButtonWidget::imageElement = ImageElement;
 }
 
-miniGUI::Image* miniGUI::ImageButtonWidget::getImage(){
-    return miniGUI::ImageButtonWidget::image;
+miniGUI::ImageElement* miniGUI::ImageButtonWidget::getImageElement(){
+    return miniGUI::ImageButtonWidget::imageElement;
 }
 
-void miniGUI::ImageButtonWidget::setImage(miniGUI::Image* image){
-    miniGUI::ImageButtonWidget::image = image;
+void miniGUI::ImageButtonWidget::setImageElement(miniGUI::ImageElement* imageElement){
+    miniGUI::ImageButtonWidget::imageElement = imageElement;
 }
 
 void miniGUI::ImageButtonWidget::__draw(SDL_Renderer* renderer){
-    miniGUI::ImageButtonWidget::image -> __draw(renderer, miniGUI::ImageButtonWidget::rect);
+    miniGUI::ImageButtonWidget::imageElement -> __draw(renderer, miniGUI::ImageButtonWidget::rect);
 }

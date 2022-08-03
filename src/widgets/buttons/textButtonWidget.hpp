@@ -2,20 +2,20 @@
 #define TEXTBUTTONWIDGET_HPP
 
 #include "buttonWidget.hpp"
-#include "../../text/text.hpp"
+#include "../../text/textElement.hpp"
 
 namespace miniGUI{
     class TextButtonWidget : public ButtonWidget{
     public:
-        TextButtonWidget(miniGUI::Vector2i position, miniGUI::Vector2i size, miniGUI::Text* text, uint32_t color = 0xFFFFFFFF);
+        TextButtonWidget(miniGUI::Vector2i position, miniGUI::Vector2i size, miniGUI::TextElement* textElement, uint32_t color = 0xFFFFFFFF);
 
-        miniGUI::Text* getText();
-        void setText(miniGUI::Text* text);
+        miniGUI::TextElement* getTextElement();
+        void setTextElement(miniGUI::TextElement* textElement);
 
         virtual void __draw(SDL_Renderer* renderer);
 
     private:
-        Text* text;
+        miniGUI::TextElement* textElement;
 
         SDL_Color color;
     };
