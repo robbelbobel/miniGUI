@@ -1,9 +1,6 @@
 #include <string>
 
-#include "window/window.hpp"
-#include "widgets/buttons/textButtonWidget.hpp"
-#include "widgets/buttons/imageButtonWidget.hpp"
-#include "widgets/text/textWidget.hpp"
+#include "include/miniGUI.hpp"
 
 int main(){
 	miniGUI::Vector2i size(500, 300);
@@ -29,10 +26,14 @@ int main(){
 	// Create Text Widget
 	miniGUI::TextWidget tWidget(miniGUI::Vector2i(0, 0), miniGUI::Vector2i(500, 50), &title);
 
+	// Create Rectangle Widget
+	miniGUI::Rectangle rectangle(miniGUI::Vector2i(20, 20), miniGUI::Vector2i(100, 100), 0xFF00FFFF);
+
 	// Add Widgets to Canvas
 	canvas.addWidget(&tbWidget);
 	canvas.addWidget(&ibWidget);
 	canvas.addWidget(&tWidget);
+	canvas.addWidget(&rectangle);
 
 	// Set Active Canvas
 	window.setCanvas(&canvas);

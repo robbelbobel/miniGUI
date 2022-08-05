@@ -9,13 +9,15 @@ add_executable(${PROJECT_NAME}  src/main.cpp
                                 src/canvas/canvas.cpp
                                 src/widgets/widget.cpp
                                 src/widgets/buttons/buttonWidget.cpp
-                                src/widgets/buttons/textButtonWidget.cpp
-                                src/widgets/buttons/imageButtonWidget.cpp
+                                src/widgets/buttons/textButtonWidget/textButtonWidget.cpp
+                                src/widgets/buttons/imageButtonWidget/imageButtonWidget.cpp
                                 src/widgets/text/textWidget.cpp
                                 src/window/window.cpp
                                 src/elements/text/textElement.cpp
                                 src/elements/image/imageElement.cpp
-                                src/elements/element.cpp)
+                                src/elements/element.cpp
+                                src/widgets/shapes/shape.cpp
+                                src/widgets/shapes/rectangle/rectangle.cpp)
                                 
 find_package(SDL2 REQUIRED)
 find_package(SDL2_ttf REQUIRED)

@@ -1,6 +1,7 @@
 # TODO
 
 * Shape Widgets
-    - rectWidget
     - circleWidget
     - triangleWidget
+
+* Restructure file structure
