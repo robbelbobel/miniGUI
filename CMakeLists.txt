@@ -5,18 +5,18 @@ project(miniGUI)
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/")
 set(CMAKE_PREFIX_PATH)
 
-add_library(${PROJECT_NAME}     src/canvas/canvas.cpp
-                                src/widgets/widget.cpp
+add_library(${PROJECT_NAME}     src/elements/element.cpp
+                                src/elements/imageElement.cpp
+                                src/elements/textElement.cpp
                                 src/widgets/buttons/buttonWidget.cpp
-                                src/widgets/buttons/textButtonWidget/textButtonWidget.cpp
-                                src/widgets/buttons/imageButtonWidget/imageButtonWidget.cpp
-                                src/widgets/text/textWidget.cpp
-                                src/window/window.cpp
-                                src/elements/text/textElement.cpp
-                                src/elements/image/imageElement.cpp
-                                src/elements/element.cpp
+                                src/widgets/buttons/imageButtonWidget.cpp
+                                src/widgets/buttons/textButtonWidget.cpp
+                                src/widgets/shapes/rectangleShapeWidget.cpp
                                 src/widgets/shapes/shape.cpp
-                                src/widgets/shapes/rectangle/rectangle.cpp)
+                                src/widgets/textWidget.cpp
+                                src/widgets/widget.cpp
+                                src/canvas.cpp
+                                src/window.cpp)
 
 find_package(SDL2 REQUIRED)
 find_package(SDL2_ttf REQUIRED)

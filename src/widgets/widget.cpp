@@ -1,4 +1,4 @@
-#include "widget.hpp"
+#include "../../include/widgets/widget.hpp"
 
 miniGUI::Widget::Widget(Vector2i position, Vector2i size){
     /** INITIALIZE CLASS VARIABLES **/

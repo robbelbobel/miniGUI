@@ -8,4 +8,5 @@ namespace miniGUI{
 		Vector2i_s(int x, int y) : x(x), y(y) {}
 	} typedef Vector2i;
 }
+
 #endif

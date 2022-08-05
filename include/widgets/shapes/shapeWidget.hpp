@@ -4,12 +4,12 @@
 #include "../widget.hpp"
 
 namespace miniGUI{
-    class Shape : public miniGUI::Widget{
+    class ShapeWidget : public miniGUI::Widget{
     public:
         virtual void __draw(SDL_Renderer* renderer);
     
     protected:
-        Shape(Vector2i position, Vector2i size, uint32_t color);
+        ShapeWidget(Vector2i position, Vector2i size, uint32_t color);
 
         SDL_Color color;
     };

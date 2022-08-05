@@ -3,8 +3,8 @@
 
 #include <SDL_ttf.h>
 
-#include "../element.hpp"
-#include "../../vector/vector.hpp"
+#include "element.hpp"
+#include "../vector.hpp"
 
 namespace miniGUI{
     class TextElement : public miniGUI::Element{

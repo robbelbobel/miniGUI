@@ -3,7 +3,7 @@
 
 #include <SDL_image.h>
 
-#include "../element.hpp"
+#include "element.hpp"
 
 namespace miniGUI{
     class ImageElement : public miniGUI::Element{

@@ -3,8 +3,8 @@
 
 #include <SDL.h>
 
-#include "../vector/vector.hpp"
-#include "../inputState/inputState.hpp"
+#include "../vector.hpp"
+#include "../inputState.hpp"
 
 namespace miniGUI{
     class Widget{

@@ -1,4 +1,4 @@
-#include "textWidget.hpp"
+#include "../../include/widgets/textWidget.hpp"
 
 miniGUI::TextWidget::TextWidget(miniGUI::Vector2i position, miniGUI::Vector2i size, miniGUI::TextElement* text) : miniGUI::Widget::Widget(position, size){
     miniGUI::TextWidget::setTextElement(text);

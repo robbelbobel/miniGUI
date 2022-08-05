@@ -3,7 +3,7 @@
 
 #include <vector>
 
-#include "../widgets/widget.hpp"
+#include "widgets/widget.hpp"
 
 namespace miniGUI{
     class Canvas{
@@ -11,6 +11,7 @@ namespace miniGUI{
         Canvas();
 
         void addWidget(Widget* widget);
+        void clear();
 
         void __update(__InputState_t* inputState);
         void __draw(SDL_Renderer* renderer);

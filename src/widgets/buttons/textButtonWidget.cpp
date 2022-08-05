@@ -1,4 +1,4 @@
-#include "textButtonWidget.hpp"
+#include "../../../include/widgets/buttons/textButtonWidget.hpp"
 
 miniGUI::TextButtonWidget::TextButtonWidget(miniGUI::Vector2i position, miniGUI::Vector2i size, miniGUI::TextElement* textElement, uint32_t color) : miniGUI::ButtonWidget::ButtonWidget(position, size){
     miniGUI::TextButtonWidget::textElement = textElement;

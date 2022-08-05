@@ -5,8 +5,8 @@
 #include <stdint.h>
 #include <SDL_ttf.h>
 
-#include "../inputState/inputState.hpp"
-#include "../canvas/canvas.hpp"
+#include "inputState.hpp"
+#include "canvas.hpp"
 
 namespace miniGUI{
 	class Window{
@@ -18,7 +18,7 @@ namespace miniGUI{
 		void update();
 		void draw();
 
-		void setCanvas(Canvas* canvas);
+		void setCanvas(miniGUI::Canvas* canvas);
 		miniGUI::Vector2i getSize();
 
 		bool shouldClose();

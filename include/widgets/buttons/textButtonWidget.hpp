@@ -1,8 +1,8 @@
 #ifndef TEXTBUTTONWIDGET_HPP
 #define TEXTBUTTONWIDGET_HPP
 
-#include "../buttonWidget.hpp"
-#include "../../../elements/text/textElement.hpp"
+#include "buttonWidget.hpp"
+#include "../../elements/textElement.hpp"
 
 namespace miniGUI{
     class TextButtonWidget : public ButtonWidget{

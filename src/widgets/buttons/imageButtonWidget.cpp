@@ -1,4 +1,4 @@
-#include "imageButtonWidget.hpp"
+#include "../../../include/widgets/buttons/imageButtonWidget.hpp"
 
 miniGUI::ImageButtonWidget::ImageButtonWidget(miniGUI::Vector2i position, miniGUI::Vector2i size, miniGUI::ImageElement* ImageElement) : miniGUI::ButtonWidget::ButtonWidget(position, size){
     miniGUI::ImageButtonWidget::imageElement = ImageElement;

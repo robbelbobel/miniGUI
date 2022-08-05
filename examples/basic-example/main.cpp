@@ -1,6 +1,15 @@
+#include <iostream>
 #include <string>
 
 #include "../../include/miniGUI.hpp"
+// #include "../../include/vector.hpp"
+// #include "../../include/window.hpp"
+// #include "../../include/elements/textElement.hpp"
+// #include "../../include/widgets/buttons/textButtonWidget.hpp"
+// #include "../../include/widgets/buttons/imageButtonWidget.hpp"
+// #include "../../include/elements/imageElement.hpp"
+// #include "../../include/widgets/textWidget.hpp"
+// #include "../../include/widgets/shapes/rectangleShapeWidget.hpp"
 
 int main(){
 	miniGUI::Vector2i size(500, 300);
@@ -27,7 +36,7 @@ int main(){
 	miniGUI::TextWidget tWidget(miniGUI::Vector2i(0, 0), miniGUI::Vector2i(500, 50), &title);
 
 	// Create Rectangle Widget
-	miniGUI::Rectangle rectangle(miniGUI::Vector2i(20, 20), miniGUI::Vector2i(100, 100), 0xFF00FFFF);
+	miniGUI::RectangleShapeWidget rectangle(miniGUI::Vector2i(20, 20), miniGUI::Vector2i(100, 100), 0xFF00FFFF);
 
 	// Add Widgets to Canvas
 	canvas.addWidget(&tbWidget);
@@ -51,10 +60,8 @@ int main(){
 			tbWidget.getTextElement() -> setSize(64);
 		}
 
-
 		if(ibWidget.isHovering()) ibWidget.getImageElement() -> setImage("/Users/robbetiteca/Downloads/image2.png");
 		else ibWidget.getImageElement() -> setImage("/Users/robbetiteca/Downloads/image.jpg");
-		
 	}
 	
 	return 0;

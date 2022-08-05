@@ -1,4 +1,4 @@
-#include "imageElement.hpp"
+#include "../../include/elements/imageElement.hpp"
 
 miniGUI::ImageElement::ImageElement(std::string path){
     miniGUI::ImageElement::surface = nullptr;

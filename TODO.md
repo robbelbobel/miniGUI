@@ -4,3 +4,4 @@
     - circleWidget
     - triangleWidget
     
+* Image Widget

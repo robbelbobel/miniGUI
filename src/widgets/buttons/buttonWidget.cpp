@@ -1,4 +1,4 @@
-#include "buttonWidget.hpp"
+#include "../../../include/widgets/buttons/buttonWidget.hpp"
 
 miniGUI::ButtonWidget::ButtonWidget(miniGUI::Vector2i position, miniGUI::Vector2i size) : miniGUI::Widget(position, size){
     miniGUI::ButtonWidget::clicked  = false;

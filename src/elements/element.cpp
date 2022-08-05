@@ -1,4 +1,4 @@
-#include "element.hpp"
+#include "../../include/elements/element.hpp"
 
 int miniGUI::Element::getWidth(){
     return -1;

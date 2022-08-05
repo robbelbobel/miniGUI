@@ -3,8 +3,8 @@
 
 #include <string>
 
-#include "../widget.hpp"
-#include "../../elements/text/textElement.hpp"
+#include "widget.hpp"
+#include "../elements/textElement.hpp"
 
 namespace miniGUI{
     class TextWidget : public Widget{

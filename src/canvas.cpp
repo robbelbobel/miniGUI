@@ -1,4 +1,4 @@
-#include "canvas.hpp"
+#include "../include/canvas.hpp"
 
 miniGUI::Canvas::Canvas(){
     ;
@@ -8,6 +8,10 @@ void miniGUI::Canvas::addWidget(Widget* widget){
     if(widget == nullptr) return;
 
     miniGUI::Canvas::widgets.push_back(widget);
+}
+
+void miniGUI::Canvas::clear(){
+    miniGUI::Canvas::widgets.clear();
 }
 
 void miniGUI::Canvas::__update(__InputState_t* inputState){

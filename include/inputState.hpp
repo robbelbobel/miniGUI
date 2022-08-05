@@ -1,7 +1,7 @@
 #ifndef INPUTSTATE_HPP
 #define INPUTSTATE_HPP
 
-#include "../vector/vector.hpp"
+#include "vector.hpp"
 
 namespace miniGUI{
     struct __InputState_s{

@@ -1,8 +1,8 @@
 #ifndef IMAGEBUTTONWIDGET_HPP
 #define IMAGEBUTTONWIDGET_HPP
 
-#include "../buttonWidget.hpp"
-#include "../../../elements/image/imageElement.hpp"
+#include "buttonWidget.hpp"
+#include "../../elements/imageElement.hpp"
 
 namespace miniGUI {
     class ImageButtonWidget : public ButtonWidget {

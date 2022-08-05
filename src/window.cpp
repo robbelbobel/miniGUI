@@ -1,4 +1,4 @@
-#include "window.hpp"
+#include "../include/window.hpp"
         
 miniGUI::Window::Window(Vector2i size, std::string title){
 	miniGUI::Window::size = size;
@@ -41,7 +41,7 @@ void miniGUI::Window::draw(){
 	SDL_RenderPresent(miniGUI::Window::renderer);
 }
 
-void miniGUI::Window::setCanvas(Canvas* canvas){
+void miniGUI::Window::setCanvas(miniGUI::Canvas* canvas){
 	miniGUI::Window::canvas = canvas;
 }
 

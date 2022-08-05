@@ -1,4 +1,4 @@
-#include "textElement.hpp"
+#include "../../include/elements/textElement.hpp"
 
 miniGUI::TextElement::TextElement(std::string text, std::string fontPath, int fontSize, uint32_t color){
     // Assign Class Variables

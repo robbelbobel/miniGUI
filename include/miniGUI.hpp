@@ -1,10 +1,29 @@
 #ifndef MINIGUI_HPP
 #define MINIGUI_HPP
 
-#include "../src/window/window.hpp"
-#include "../src/widgets/buttons/textButtonWidget/textButtonWidget.hpp"
-#include "../src/widgets/buttons/imageButtonWidget/imageButtonWidget.hpp"
-#include "../src/widgets/text/textWidget.hpp"
-#include "../src/widgets/shapes/rectangle/rectangle.hpp"
+/** ELEMENTS **/
+// Image Element
+#include "elements/imageElement.hpp"
+// Text Element
+#include "elements/textElement.hpp"
+
+/** Widgets **/
+// Text Widget
+#include "widgets/textWidget.hpp"
+// Image Widget
+/**/
+
+/** BUTTON WIDGETS **/
+// Image Button Widget
+#include "widgets/buttons/imageButtonWidget.hpp"
+// Text Button Widget
+#include "widgets/buttons/textButtonWidget.hpp"
+
+/** SHAPES **/
+// Rectangle Shape Widget
+#include "widgets/shapes/rectangleShapeWidget.hpp"
+
+/** OTHER **/
+#include "window.hpp"
 
 #endif
