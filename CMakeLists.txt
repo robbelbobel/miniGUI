@@ -1,12 +1,11 @@
 cmake_minimum_required(VERSION 3.23)
 project(miniGUI)
 
+# Build Library
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/")
 set(CMAKE_PREFIX_PATH)
-set(CMAKE_BUILD_TYPE Debug)
 
-add_executable(${PROJECT_NAME}  src/main.cpp
-                                src/canvas/canvas.cpp
+add_library(${PROJECT_NAME}     src/canvas/canvas.cpp
                                 src/widgets/widget.cpp
                                 src/widgets/buttons/buttonWidget.cpp
                                 src/widgets/buttons/textButtonWidget/textButtonWidget.cpp
@@ -18,10 +17,14 @@ add_executable(${PROJECT_NAME}  src/main.cpp
                                 src/elements/element.cpp
                                 src/widgets/shapes/shape.cpp
                                 src/widgets/shapes/rectangle/rectangle.cpp)
-                                
+
 find_package(SDL2 REQUIRED)
 find_package(SDL2_ttf REQUIRED)
 find_package(SDL2_image REQUIRED)
 
-include_directories(${PROJECT_NAME} ${SDL2_INCLUDE_DIR} ${SDL2_TTF_INCLUDE_DIRS} ${SDL2_IMAGE_INCLUDE_DIRS})
-target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARY} ${SDL2_TTF_LIBRARIES} ${SDL2_IMAGE_LIBRARIES})
+include_directories(miniGUI ${SDL2_INCLUDE_DIR} ${SDL2_TTF_INCLUDE_DIRS} ${SDL2_IMAGE_INCLUDE_DIRS})
+target_link_libraries(miniGUI ${SDL2_LIBRARY} ${SDL2_TTF_LIBRARIES} ${SDL2_IMAGE_LIBRARIES})
+
+# Build Examples
+add_executable(basic-example examples/basic-example/main.cpp)
+target_link_libraries(basic-example miniGUI)

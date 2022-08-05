@@ -1,6 +1,6 @@
 #include <string>
 
-#include "include/miniGUI.hpp"
+#include "../../include/miniGUI.hpp"
 
 int main(){
 	miniGUI::Vector2i size(500, 300);
