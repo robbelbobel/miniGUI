@@ -28,5 +28,5 @@ void miniGUI::ButtonWidget::__update(__InputState_t* inputState){
 }
 
 void miniGUI::ButtonWidget::__draw(SDL_Renderer* renderer){
-    ;
+    return;
 }

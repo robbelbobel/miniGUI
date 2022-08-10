@@ -1,7 +1,7 @@
 #include "../include/canvas.hpp"
 
 miniGUI::Canvas::Canvas(){
-    ;
+    return;
 }
 
 void miniGUI::Canvas::addWidget(Widget* widget){
