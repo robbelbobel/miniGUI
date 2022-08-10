@@ -1,8 +1,6 @@
 #ifndef TEXTWIDGET_HPP
 #define TEXTWIDGET_HPP
 
-#include <string>
-
 #include "widget.hpp"
 #include "../elements/textElement.hpp"
 

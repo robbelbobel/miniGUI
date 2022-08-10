@@ -10,7 +10,7 @@
 /** Widgets **/
 // Text Widget
 #include "widgets/textWidget.hpp"
-// Image Widget
+#include "widgets/imageWidget.hpp"
 /**/
 
 /** BUTTON WIDGETS **/

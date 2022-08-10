@@ -6,6 +6,7 @@ miniGUI::ButtonWidget::ButtonWidget(miniGUI::Vector2i position, miniGUI::Vector2
 }
 
 bool miniGUI::ButtonWidget::isClicked(){
+    // Reset Clicked After Check
     bool clicked = miniGUI::ButtonWidget::clicked;
     miniGUI::ButtonWidget::clicked = false;
     return clicked;

@@ -13,6 +13,7 @@ add_library(${PROJECT_NAME}     src/elements/element.cpp
                                 src/widgets/buttons/textButtonWidget.cpp
                                 src/widgets/shapes/rectangleShapeWidget.cpp
                                 src/widgets/shapes/shape.cpp
+                                src/widgets/imageWidget.cpp
                                 src/widgets/textWidget.cpp
                                 src/widgets/widget.cpp
                                 src/canvas.cpp

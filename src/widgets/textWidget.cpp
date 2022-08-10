@@ -5,7 +5,7 @@ miniGUI::TextWidget::TextWidget(miniGUI::Vector2i position, miniGUI::Vector2i si
 }
 
 miniGUI::TextWidget::~TextWidget(){
-    ;
+    return;
 }
 
 void miniGUI::TextWidget::setTextElement(miniGUI::TextElement* textElement){

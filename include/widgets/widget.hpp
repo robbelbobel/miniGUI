@@ -24,7 +24,7 @@ namespace miniGUI{
 
     protected:
         /** PROTECTED CLASS FUNCTIONS **/
-        Widget(Vector2i position, Vector2i size);
+        Widget(miniGUI::Vector2i position, miniGUI::Vector2i size);
 
         /** PROTECTED CLASS VARIABLES **/
         bool enabled;

@@ -1,6 +1,6 @@
 #include "../../include/widgets/widget.hpp"
 
-miniGUI::Widget::Widget(Vector2i position, Vector2i size){
+miniGUI::Widget::Widget(miniGUI::Vector2i position, miniGUI::Vector2i size){
     /** INITIALIZE CLASS VARIABLES **/
     // Enabling
     miniGUI::Widget::enabled = true;
