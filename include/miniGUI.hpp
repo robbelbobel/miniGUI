@@ -1,6 +1,16 @@
 #ifndef MINIGUI_HPP
 #define MINIGUI_HPP
 
+/**
+ * @author Robbe Titeca
+ * 
+ * @version alpha 1.0
+ * @date 2022-08-10
+ * 
+ * @copyright Copyright (c) 2022 Robbe Titeca
+ * 
+ */
+
 /** ELEMENTS **/
 // Image Element
 #include "elements/imageElement.hpp"
