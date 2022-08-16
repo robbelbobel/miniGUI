@@ -11,6 +11,8 @@ namespace miniGUI{
         Canvas();
 
         void addWidget(Widget* widget);
+        bool removeWidget(Widget* widget);
+
         void clear();
 
         void __update(__InputState_t* inputState);

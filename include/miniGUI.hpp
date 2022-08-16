@@ -4,7 +4,7 @@
 /**
  * @author Robbe Titeca
  * 
- * @version alpha 1.0
+ * @version alpha 1.1
  * @date 2022-08-10
  * 
  * @copyright Copyright (c) 2022 Robbe Titeca

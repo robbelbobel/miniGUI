@@ -49,14 +49,7 @@ int main(){
 		window.update();
 		window.draw();
 
-		if(tbWidget.isHovering()){
-			tbWidget.getTextElement() -> setText("Hovering");
-			tbWidget.getTextElement() -> setSize(32);
-		} 
-		else{
-			tbWidget.getTextElement() -> setText("Text");
-			tbWidget.getTextElement() -> setSize(64);
-		}
+		if(tbWidget.isHovering()) canvas.removeWidget(&tbWidget);
 
 		if(ibWidget.isHovering()) ibWidget.getImageElement() -> setImage("/Users/robbetiteca/Downloads/image2.png");
 		else ibWidget.getImageElement() -> setImage("/Users/robbetiteca/Downloads/image.jpg");

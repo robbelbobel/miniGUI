@@ -10,6 +10,17 @@ void miniGUI::Canvas::addWidget(Widget* widget){
     miniGUI::Canvas::widgets.push_back(widget);
 }
 
+bool miniGUI::Canvas::removeWidget(Widget* widget){
+    for(uint8_t i = 0; i < miniGUI::Canvas::widgets.size(); i++){
+        if(miniGUI::Canvas::widgets.at(i) == widget){
+            miniGUI::Canvas::widgets.erase(miniGUI::Canvas::widgets.begin() + i);
+            return true;
+        }
+    }
+
+    return false;
+}
+
 void miniGUI::Canvas::clear(){
     miniGUI::Canvas::widgets.clear();
 }
