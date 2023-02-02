@@ -4,16 +4,16 @@ miniGUI::Canvas::Canvas(){
     return;
 }
 
-void miniGUI::Canvas::addWidget(Widget* widget){
-    if(widget == nullptr) return;
+void miniGUI::Canvas::addLayer(miniGUI::Layer* layer){
+    if(layer == nullptr) return;
 
-    miniGUI::Canvas::widgets.push_back(widget);
+    miniGUI::Canvas::layers.push_back(layer);
 }
 
-bool miniGUI::Canvas::removeWidget(Widget* widget){
-    for(uint8_t i = 0; i < miniGUI::Canvas::widgets.size(); i++){
-        if(miniGUI::Canvas::widgets.at(i) == widget){
-            miniGUI::Canvas::widgets.erase(miniGUI::Canvas::widgets.begin() + i);
+bool miniGUI::Canvas::removeLayer(miniGUI::Layer* layer){
+    for(uint8_t i = 0; i < miniGUI::Canvas::layers.size(); i++){
+        if(miniGUI::Canvas::layers.at(i) == layer){
+            miniGUI::Canvas::layers.erase(miniGUI::Canvas::layers.begin() + i);
             return true;
         }
     }
@@ -22,15 +22,15 @@ bool miniGUI::Canvas::removeWidget(Widget* widget){
 }
 
 void miniGUI::Canvas::clear(){
-    miniGUI::Canvas::widgets.clear();
+    miniGUI::Canvas::layers.clear();
 }
 
 void miniGUI::Canvas::__update(__InputState_t* inputState){
-    // Update Every Widget
-    for(size_t i = 0; i < miniGUI::Canvas::widgets.size(); i++) miniGUI::Canvas::widgets.at(i) -> __update(inputState);
+    // Only Update Top Layer
+    miniGUI::Canvas::layers.back() -> __update(inputState);
 }
 
 void miniGUI::Canvas::__draw(SDL_Renderer* renderer){
-    // Draw Every Widget
-    for(size_t i = 0; i < miniGUI::Canvas::widgets.size(); i++) miniGUI::Canvas::widgets.at(i) -> __draw(renderer);
+    // Draw Every Layer
+    for(size_t i = 0; i < miniGUI::Canvas::layers.size(); i++) miniGUI::Canvas::layers.at(i) -> __draw(renderer);
 }

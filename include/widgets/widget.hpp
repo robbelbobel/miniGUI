@@ -1,7 +1,7 @@
 #ifndef WIDGET_HPP
 #define WIDGET_HPP
 
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 #include "../vector.hpp"
 #include "../inputState.hpp"

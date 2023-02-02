@@ -4,10 +4,10 @@
 /**
  * @author Robbe Titeca
  * 
- * @version alpha 1.1
+ * @version alpha 1.2
  * @date 2022-08-10
  * 
- * @copyright Copyright (c) 2022 Robbe Titeca
+ * @copyright Copyright (c) 2023 Robbe Titeca
  * 
  */
 
