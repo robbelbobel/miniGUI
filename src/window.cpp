@@ -54,8 +54,12 @@ miniGUI::Canvas* miniGUI::Window::getCanvas(){
 	return miniGUI::Window::canvas;
 }
 
-miniGUI::Vector2i miniGUI::Window::getSize(){
-	return miniGUI::Window::size;
+int miniGUI::Window::getWidth(){
+	return miniGUI::Window::size.x;
+}
+
+int miniGUI::Window::getHeight(){
+	return miniGUI::Window::size.y;
 }
 
 bool miniGUI::Window::shouldClose(){

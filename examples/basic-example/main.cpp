@@ -20,7 +20,7 @@ int main(){
 	// Create Text
 	miniGUI::TextElement textElement("text", std::string(SOURCE_DIR) + std::string("assets/roboto-black.ttf"), 64, 0xFFFFFFFF);
 	// Create TextButtonWidget
-	miniGUI::TextButtonWidget tbWidget(miniGUI::Vector2i(200, 20), miniGUI::Vector2i(300, 100), &textElement, 0x00FFFFFF);
+	miniGUI::TextButtonWidget tbWidget(miniGUI::Vector2i(200, 50), miniGUI::Vector2i(300, 100), &textElement, 0x00FFFFFF);
 
 	// Create Image
 	miniGUI::ImageElement imageElement2(std::string(SOURCE_DIR) + std::string("assets/image1.jpg"));
@@ -30,7 +30,7 @@ int main(){
 	// Create Title
 	miniGUI::TextElement title("title", std::string(SOURCE_DIR) + std::string("assets/roboto-black.ttf"), 64, 0xFFFFFFFF);
 	// Create Text Widget
-	miniGUI::TextWidget tWidget(miniGUI::Vector2i(0, 0), miniGUI::Vector2i(500, 50), &title);
+	miniGUI::TextWidget tWidget(miniGUI::Vector2i((window.getWidth() / 2) - (title.getWidth() / 2), 0), miniGUI::Vector2i(title.getWidth(), title.getHeight()), &title);
 
 	// Create Rectangle Widget
 	miniGUI::RectangleShapeWidget rectangle(miniGUI::Vector2i(20, 20), miniGUI::Vector2i(100, 100), 0xFF00FFFF);

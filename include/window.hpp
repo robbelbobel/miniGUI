@@ -22,7 +22,8 @@ namespace miniGUI{
 		void setCanvas(miniGUI::Canvas* canvas);
 		miniGUI::Canvas* getCanvas();
 		
-		miniGUI::Vector2i getSize();
+		int getWidth();
+		int getHeight();
 
 		bool shouldClose();
 
