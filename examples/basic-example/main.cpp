@@ -13,22 +13,22 @@ int main(){
 	miniGUI::Canvas canvas;
 
 	// Create Background
-	miniGUI::ImageElement imageElement("/Users/robbetiteca/Downloads/image.jpg");
+	miniGUI::ImageElement imageElement(std::string(SOURCE_DIR) + std::string("assets/background.jpg"));
 	// Create Background Image Widget
 	miniGUI::ImageWidget iWidget(miniGUI::Vector2i(0, 0), size, &imageElement);
 
 	// Create Text
-	miniGUI::TextElement textElement("text", "/Users/robbetiteca/Downloads/Roboto/Roboto-Black.ttf", 64, 0xFFFFFFFF);
+	miniGUI::TextElement textElement("text", std::string(SOURCE_DIR) + std::string("assets/roboto-black.ttf"), 64, 0xFFFFFFFF);
 	// Create TextButtonWidget
 	miniGUI::TextButtonWidget tbWidget(miniGUI::Vector2i(200, 20), miniGUI::Vector2i(300, 100), &textElement, 0x00FFFFFF);
 
 	// Create Image
-	miniGUI::ImageElement imageElement2("/Users/robbetiteca/Downloads/image.jpg");
+	miniGUI::ImageElement imageElement2(std::string(SOURCE_DIR) + std::string("assets/image1.jpg"));
 	// Create ImageButtonWidget
 	miniGUI::ImageButtonWidget ibWidget(miniGUI::Vector2i(0, 0), miniGUI::Vector2i(200, 200), &imageElement2);
 
 	// Create Title
-	miniGUI::TextElement title("title", "/Users/robbetiteca/Downloads/Roboto/Roboto-Black.ttf", 64, 0xFFFFFFFF);
+	miniGUI::TextElement title("title", std::string(SOURCE_DIR) + std::string("assets/roboto-black.ttf"), 64, 0xFFFFFFFF);
 	// Create Text Widget
 	miniGUI::TextWidget tWidget(miniGUI::Vector2i(0, 0), miniGUI::Vector2i(500, 50), &title);
 
@@ -51,8 +51,8 @@ int main(){
 
 		if(tbWidget.isHovering()) canvas.removeWidget(&tbWidget);
 
-		if(ibWidget.isHovering()) ibWidget.getImageElement() -> setImage("/Users/robbetiteca/Downloads/image2.png");
-		else ibWidget.getImageElement() -> setImage("/Users/robbetiteca/Downloads/image.jpg");
+		if(ibWidget.isHovering()) ibWidget.getImageElement() -> setImage(std::string(SOURCE_DIR) + std::string("assets/image2.jpg"));
+		else ibWidget.getImageElement() -> setImage(std::string(SOURCE_DIR) + std::string("assets/image1.jpg"));
 	}
 	
 	return 0;
