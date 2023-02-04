@@ -47,10 +47,12 @@ void miniGUI::TextElement::setColor(uint32_t color){
 }
 
 int miniGUI::TextElement::getWidth(){
+    if(miniGUI::TextElement::surface == nullptr) return 0;
     return miniGUI::TextElement::surface -> w;
 }
 
 int miniGUI::TextElement::getHeight(){
+    if(miniGUI::TextElement::surface == nullptr) return 0;
     return miniGUI::TextElement::surface -> h;
 }
 

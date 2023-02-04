@@ -23,10 +23,12 @@ void miniGUI::ImageElement::setImage(std::string path){
 }
 
 int miniGUI::ImageElement::getWidth(){
+    if(miniGUI::ImageElement::surface == nullptr) return 0;
     return miniGUI::ImageElement::surface -> w;
 }
 
 int miniGUI::ImageElement::getHeight(){
+    if(miniGUI::ImageElement::surface == nullptr) return 0;
     return miniGUI::ImageElement::surface -> h;
 }
 
