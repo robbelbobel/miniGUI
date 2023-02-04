@@ -26,6 +26,8 @@ void miniGUI::Canvas::clear(){
 }
 
 void miniGUI::Canvas::__update(__InputState_t* inputState){
+    if(!miniGUI::Canvas::layers.size()) return;
+
     // Only Update Top Layer
     miniGUI::Canvas::layers.back() -> __update(inputState);
 }
